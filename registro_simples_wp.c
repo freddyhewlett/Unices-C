@@ -76,10 +76,10 @@ int menup(int x){
 	return(x);
 }
 void cadastro(){
-	int i, exit;
-	exit=1;
+	int i, sair;
+	sair=1;
 	for (i=j;i<MAX;i++){
-		if (exit!=0){
+		if (sair!=0){
 			system("cls");
 			projetos[i].codigo=i+1;
 			printf("Projeto Nº %d\n", projetos[i].codigo);
@@ -112,7 +112,7 @@ void cadastro(){
 			system("pause");
 			system("cls");
 			printf("\n\nDigite 1 para continuar cadastrando projetos ou 0 para voltar ao menu principal: ");
-			scanf("%d", &exit);
+			scanf("%d", &sair);
 			fflush(stdin);
 			system("cls");
 			j=i+1; // registro do fim do cadastro. Em caso de novos cadastros, o codigo não irá repetir
@@ -120,9 +120,9 @@ void cadastro(){
 	}
 }
 void pesq(){
-	int acha, busca, i, exit, codPesq;
-	exit=1;
-	while (exit!=0){
+	int acha, busca, i, sair, codPesq;
+	sair=1;
+	while (sair!=0){
 		printf("\n\nDigite o codigo do projeto a ser pesquisado: ");
 		scanf("%d", &busca);
 		fflush(stdin);
@@ -165,7 +165,7 @@ void pesq(){
 		system("pause");
 		system("cls");
 		printf("\nDigite 1 para retornar a pesquisa ou 0 para voltar ao menu principal.\n");
-		scanf("%d", &exit);
+		scanf("%d", &sair);
 		fflush(stdin);
 		system("cls");
 	}
